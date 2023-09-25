@@ -39,6 +39,31 @@
       "name": "antman",
       "alterEgo": "marble",
       "id": 8
+    },
+    {
+      "name": "green arrow",
+      "alterEgo": "oliver queen",
+      "id": 9
+    },
+    {
+      "name": "test",
+      "alterEgo": "test",
+      "id": 10
+    },
+    {
+      "name": "dasf",
+      "alterEgo": "sdafdsaf",
+      "id": 11
+    },
+    {
+      "name": "ㅇㄴ리ㅏㅓ",
+      "alterEgo": "ㅇㄴ리ㅏㅓ",
+      "id": 12
+    },
+    {
+      "name": "아ㅣ",
+      "alterEgo": "456789",
+      "id": 13
     }
   ],
   "friends": [
