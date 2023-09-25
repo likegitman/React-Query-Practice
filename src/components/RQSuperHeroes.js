@@ -23,6 +23,8 @@ const RQSuperHeroes = () => {
         console.log({ name, alterEgo })
         const hero = { name, alterEgo }
         addHero(hero)
+        setName('')
+        setAlterEgo('')
     }
 
     if (isLoading || isFetching) return <h2>Loading...</h2>
