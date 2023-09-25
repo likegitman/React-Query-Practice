@@ -14,6 +14,26 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "Hurk",
+      "alterEgo": "marble",
+      "id": 4
+    },
+    {
+      "name": "Hurk",
+      "alterEgo": "marble",
+      "id": 5
+    },
+    {
+      "name": "Iaonman",
+      "alterEgo": "marble",
+      "id": 6
+    },
+    {
+      "name": "Iaonman",
+      "alterEgo": "dsfda",
+      "id": 7
     }
   ],
   "friends": [
@@ -39,7 +59,11 @@
   "channels": [
     {
       "id": "codevolution",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "colors": [
