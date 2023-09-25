@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query'
 import axios from 'axios'
 
@@ -6,16 +6,30 @@ const fetchSuperHeroes = () => {
     return axios.get('http://localhost:4000/superheroes')
 }
 const RQSuperHeroes = () => {
+
+    const [refetchTime, setRefetchTime] = useState(3000)
+
+    const onSuccess = (data) => {
+        console.log(data.data.length);
+        setRefetchTime(3000)
+    }
+
+    const onError = (error) => {
+        setRefetchTime(0)
+    }
+
     const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-heroes', fetchSuperHeroes,
         {
             // cacheTime: 5000, // 5초 동안 데이터를 캐싱함
             // staleTime: 30000, // 30초 동안 stale data를 보여줌
             // refetchOnMount: true, // mount 시 자동으로 쿼리를 실행하는가?
             // refetchOnWindowFocus: false, // 브라우저 창이 focus 시 자동으로 쿼리를 실행하는가?
-            // refetchInterval: 2000, // 2초마다 자동으로 query를 실행함
+            refetchInterval: refetchTime, // 2초마다 자동으로 query를 실행함
             // refetchIntervalInBackground: false // 백그라운드에서도 자동으로 query를 실행함
-            enabled: false
-        }
+            // enabled: false
+            onSuccess,
+            onError
+        },
     )
 
     console.log({ isLoading, isFetching })
