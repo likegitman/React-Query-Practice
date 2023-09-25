@@ -8,6 +8,7 @@ import ParallelQueriesPage from '../components/ParallelQueriesPage';
 import DynamicParallelPage from '../components/DynamicParallelPage';
 import DependentQueriesPage from '../components/DependentQueriesPage';
 import PaginatedQueriesPage from '../components/PaginatedQueriesPage';
+import InfiniteQueriesPage from '../components/InfiniteQueriesPage';
 
 const RouterApp = () => {
     return (
@@ -20,6 +21,7 @@ const RouterApp = () => {
             <Route path='/rq-dynamic-parallel' element={<DynamicParallelPage heroIds={[1, 3]} />} />
             <Route path='/rq-dependent' element={<DependentQueriesPage email='momlin@example.com' />} />
             <Route path='/rq-paginated' element={<PaginatedQueriesPage />} />
+            <Route path='/rq-infinite' element={<InfiniteQueriesPage />} />
         </Routes>
     );
 };
